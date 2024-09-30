@@ -11,7 +11,7 @@ sycl-ls
 
 Output:
 
-![sycl-ls output](..\assets\sycl-ls.png)
+![sycl-ls output](../assets/sycl-ls.png)
 
 ### 2. Create and Activate Python Virtual Environment
 ```bash
@@ -39,5 +39,5 @@ python -c "import torch; import intel_extension_for_pytorch as ipex; print(torch
 ```
 Output:
 
-![sanity check](..\assets\sanity_check.png)
+![sanity check](../assets/sanity_check.png)
 
