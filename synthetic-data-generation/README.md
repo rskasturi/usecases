@@ -3,7 +3,7 @@
 - Hardware & Environment
   
 - Environment
-- Intel Developer Cloud
+  Intel Developer Cloud
   
 - Hardware
 [opencl:cpu] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8468V OpenCL 3.0 (Build 0) [2024.18.7.0.11_160000]
