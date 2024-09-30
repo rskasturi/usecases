@@ -8,8 +8,8 @@
 
 ## Multicard Inference
 
-- **Description:** #TODO
-- **Team:** Jyothis V James, Rahila
+- **Description:** A repository of Jupyter Notebooks or Python Scripts that enables users to do multi-card inference on [Intel® Tiber™ Developer Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html) on [Intel® Data Center GPU Max Series](https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/max-series.html) nodes.
+- **Team:** Jyothis V James, Rahila T
 
 ## Video Analytics
 
