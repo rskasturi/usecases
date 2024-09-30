@@ -8,7 +8,7 @@
 
 ## Environment Setup
 
-
+Please refer the [guide](./env_setup/README.md) for multi-card inference environment setup.
 
 ## Experiments
 
