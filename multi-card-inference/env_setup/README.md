@@ -45,3 +45,8 @@ Output:
 
 ![sanity check](../assets/sanity_check.png)
 
+
+## Monitor XPU Usage
+```bash
+xpu-smi dump -m 5,18
+```
