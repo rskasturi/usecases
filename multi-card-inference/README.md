@@ -12,7 +12,7 @@ Please refer the [guide](./env_setup/README.md) for multi-card inference environ
 
 ## Experiments
 
-- Data Parallel (DP) - ResNet50
-- Distributed Data Parallel (DDP) - ResNet50
-- Accelerate - LLM
+- [Data Parallel (DP) - ResNet50](./experiments/data_parallel)
+- [Distributed Data Parallel (DDP) - ResNet50](./experiments/distributed_data_parallel)
+- [Accelerate - LLM](./experiments/accelerate)
 - Deepspeed - LLM
