@@ -31,7 +31,7 @@ else:
     print("Using CPU")
 
 # Paths
-ROOT_DIRECTORY = '<Root_Directory_Path>'
+ROOT_DIRECTORY = '<PWD_Path>' #Make sure to provide pwd path Ex: ~/path_to_folder/
 PERSIST_DIRECTORY = f"{ROOT_DIRECTORY}/DB"
 pdf_file_path = f"{ROOT_DIRECTORY}/data/attention.pdf"
 store = LocalFileStore("./db_cache/cache/")
@@ -40,7 +40,7 @@ store = LocalFileStore("./db_cache/cache/")
 EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"
 
 # Hugging Face Model
-MODEL_ID = "NousResearch/Llama-2-7b-chat-hf"
+MODEL_ID = "NousResearch/Llama-2-7b-chat-hf" #Can also try with different models Ex: "NousResearch/Hermes-2-Pro-Mistral-7B", 
 
 # Generation config parameters
 MAX_LENGTH = 4096
