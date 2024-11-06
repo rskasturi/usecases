@@ -54,11 +54,17 @@ python -c "import torch; import intel_extension_for_pytorch as ipex; print(torch
 To ensure the project functions correctly, download and set up the necessary software dependencies.
     
 ```bash
-    python -m pip install -r requirements.txt
-    python -m pip install sentence-transformers==2.2.2
+    python3 -m pip install -r requirements.txt
+    python3 -m pip install sentence-transformers==2.2.2
 ```
 **Note:** To run this project, it is essential to use a compatible version of the sentence-transformers library. Please install version 2.2.2
 
+### 5. Run the application:
+To run the code.
+
+```bash
+    python3 main.py
+```
 ## Overview
 
 ### Description
