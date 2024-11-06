@@ -23,5 +23,6 @@
 
 ## RAG
 
-- **Description:** #TODO
+- **Description:** Python code that implements Hybrid Retrieval-Augmented Generation (RAG) model using Large Language Models (LLMs) and [Intel Extension for PyTorch](https://intel.github.io/intel-extension-for-pytorch/index.html#introduction).
 - **Team:** Aryan Karumuri
+- **Code:** [here](./llm-rag/)
