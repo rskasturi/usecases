@@ -18,8 +18,9 @@
 
 ## Quantization
 
-- **Description:** #TODO
+- **Description:** Detailed overview on usage of Intel Neural Compressor for Automatic Speech Recognition
 - **Team:** Shivani Karangula, Nikhila Haridas
+- **Code:** [Here](./asr_quantization)
 
 ## RAG
 
