@@ -32,7 +32,7 @@ python -m pip install torch==2.1.0.post3 torchvision==0.16.0.post3 torchaudio==2
 python -m pip install numpy==1.26.4
 ```
 ## Run the application:
-Before running the [code](https://github.com/jaideepsai-narayan/video-analytics/blob/main/Running_on_XPU.ipynb) we need to download the models with help of git lfs
+Before running the [code](https://github.com/rskasturi/usecases/blob/master/video_analytics/Running_on_XPU.ipynb) we need to download the models with help of git lfs
 
 ```
 git lfs install
