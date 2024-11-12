@@ -17,36 +17,15 @@ world knowledge, and each individual can be associated with their unique knowled
 interest, personality and profession.
 - Thus, they can tap into almost every perspective encapsulated
 within the LLM to create diverse synthetic data at scale.
-- This approach involves integrating a persona into the appropriate position in a data synthesis prompt. 
+- This approach involves integrating a persona into the appropriate position in a data synthesis prompt.
 - Driven by the 1 billion personas in Persona Hub, this approach can easily create
 diverse synthetic data at a billion scale.
 
-## vllm [setup](./vllm-setup/) for Intel XPUs
+## vllm setup on Intel XPUs
 
-- For detailed instructions on setting up vllm, please follow this link: [vllm setup](./vllm-setup/)
+- Detailed instructions for vllm setup are [here](./vllm-setup/)
 
-## Environment & Hardware
-  
-### Environment
+## Notebooks
 
-- [**Intel Tiber Developer Cloud**](https://console.cloud.intel.com)
-  
-### Hardware
-
-  ```bash
-[opencl:cpu] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8468V OpenCL 3.0 (Build 0) [2024.18.7.0.11_160000]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[level_zero:gpu] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1100 1.3 [1.3.27191]
-
-```
-
-### Notebook
-
-- [Synthetic Datageneration](./src/synthetic_datagen_xpu.ipynb)
+- Synthetic Data generation using vLLM on Intel XPUs: [Notebook](./data-generation/synthetic_datagen_xpu.ipynb)
+- Small Language Model finetuning with Synthetic Data on Intel XPUs: [Notebook](./finetuning-synthetic-data/)
