@@ -4,7 +4,7 @@
 
 - **Description:** An End-to-End notebook for Synthetic Data generation using LLMs served with [vllm](https://docs.vllm.ai/en/latest/index.html) and [Intel Extension for PyTorch](https://intel.github.io/intel-extension-for-pytorch/index.html#introduction).
 - **Team:** Rajashekar Kasturi, Thasneem Vazim
-- **Code:**
+- **Code:** Synthetic Data Generation - [Notebook](./synthetic-data-generation/data-generation/), Small Language Model Finetuning on Synthetic Data - [Notebook](./synthetic-data-generation/finetuning-synthetic-data/)
 
 ## Multicard Inference
 
