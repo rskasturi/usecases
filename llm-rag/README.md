@@ -1,7 +1,7 @@
 # Hybrid RAG
 
 ## Usecase: Cache-Enabled Hybrid Retrievals
-Enhancing Contextual Understanding in Chat Histories
+**Cache-Enabled Hybrid Retrievals** combine both **cached data** and **real-time retrieval** methods in a single system. Frequently requested data is served directly from the cache for fast access, while more complex or less frequent queries are dynamically retrieved from other sources, such as databases. This hybrid approach optimizes performance by balancing the speed of cached responses with the flexibility of real-time data retrieval, ensuring efficiency in handling diverse query types.
 
 ## Verified Environment
 - **Platform:** [Intel® Tiber™ AI Cloud](#https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html)
@@ -62,6 +62,8 @@ To ensure the project functions correctly, download and set up the necessary sof
 ### 5. Run the application:
 To run the code.
 
+The `main.py` is updated with additional features such as Reranking(CrossEncoderReranker) and Contextual Compression Retriever.
+
 ```bash
     python3 main.py
 ```
@@ -80,5 +82,9 @@ This project implements a conversational AI system using LangChain, PyTorch, and
 4. **Contextual Retrieval**: Reformulates user questions based on chat history to provide more relevant responses.
 
 5. **Local Storage Management**: Manages persistent storage of documents and embeddings using local file storage.
+
+6. **Reranking**: Refines search results by reordering them based on relevance, typically using machine learning models to assess and improve the accuracy of the top results.
+
+7. **Contextual Compression Retriever**: Retrieves information by compressing and understanding the context of user queries, improving retrieval efficiency while maintaining the relevance of results.
 
 

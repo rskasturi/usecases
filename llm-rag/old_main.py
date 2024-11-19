@@ -21,9 +21,6 @@ from chromadb.config import Settings
 from langchain_community.vectorstores import Chroma
 from langchain_community.retrievers import BM25Retriever
 from langchain.retrievers import EnsembleRetriever
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import CrossEncoderReranker
-from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 
 # Device Availability
 device = torch.device("xpu" if torch.xpu.is_available() else "cpu")
@@ -39,19 +36,19 @@ PERSIST_DIRECTORY = f"{ROOT_DIRECTORY}/DB"
 pdf_file_path = f"{ROOT_DIRECTORY}/data/attention.pdf"
 store = LocalFileStore("./db_cache/cache/")
 
-if os.path.exists(PERSIST_DIRECTORY):
-    os.system(f'rm -rf {PERSIST_DIRECTORY}')
-
 # Embedding Model
 EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"
 
 # Hugging Face Model
-MODEL_ID = "NousResearch/Llama-2-7b-chat-hf"
+MODEL_ID = "NousResearch/Llama-2-7b-chat-hf" #Can also try with different models Ex: "NousResearch/Hermes-2-Pro-Mistral-7B", 
 
 # Generation config parameters
 MAX_LENGTH = 4096
+#MAX_LENGTH = 8096
 TEMPERATURE = 0.1
+DO_SAMPLE = False
 REPETITION_PENALTY = 1.15
+RETURN_FULL_TEXT = False 
 
 # Session state management
 session_store = {}
@@ -104,25 +101,21 @@ db = Chroma.from_documents(
 )
 
 def hybrid_retrievers():
+    db = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embedder, client_settings=CHROMA_SETTINGS)
     db_retriever = db.as_retriever()
     
     # BM25 Retriever
     sparse_retriever = BM25Retriever.from_documents(documents)
     sparse_retriever.k = 5
 
-    # Adding Reranking and Contextual Compression Retriever
-    model = HuggingFaceCrossEncoder(model_name="BAAI/bge-reranker-base")
-    compressor = CrossEncoderReranker(model=model, top_n=3)
-    compression_retriever = ContextualCompressionRetriever(
-        base_compressor=compressor, base_retriever=db_retriever
-    )
-
-    ensemble_retriever = EnsembleRetriever(retrievers=[compression_retriever, sparse_retriever], weights=[0.5, 0.5])
+    ensemble_retriever = EnsembleRetriever(retrievers=[db_retriever, sparse_retriever], weights=[0.5, 0.5])
     return ensemble_retriever
 
 def llm():
+    # Load the model
     model = AutoModelForCausalLM.from_pretrained(MODEL_ID, trust_remote_code=True, torch_dtype=torch.bfloat16)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+    model.to(device)
 
     # Generation Config
     generation_config = GenerationConfig.from_pretrained(MODEL_ID)
@@ -134,6 +127,7 @@ def llm():
         device=device,
         tokenizer=tokenizer,
         max_length=MAX_LENGTH,
+        #max_new_tokens=512,
         temperature=TEMPERATURE,
         repetition_penalty=REPETITION_PENALTY,
         generation_config=generation_config,
@@ -145,6 +139,7 @@ def llm():
     return HuggingFacePipeline(pipeline=pipe)
 
 def history_aware_retriever():
+    # Contextualize the question
     contextualize_q_system_prompt = (
         "Given a chat history and the latest user question, "
         "which might reference context in the chat history, "
@@ -206,6 +201,7 @@ while True:
             "configurable": {"session_id": session_id}
         },
     )
+    #print(response['answer'])
     print("\nAssistant:", response['answer'].split("Bot:")[-1].strip())
     print("\n\n")
     print("Chat History:", session_history.messages)
