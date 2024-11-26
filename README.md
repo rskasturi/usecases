@@ -12,11 +12,12 @@
 - **Description:** A repository of Jupyter Notebooks or Python Scripts that enables users to do multi-card inference on [Intel® Tiber™ Developer Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html) on [Intel® Data Center GPU Max Series](https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/max-series.html) nodes.
 - **Team:** Jyothis V James, Rahila T
 
-## Video Analytics
+## [Video Analytics](./video_analytics)
 
-- **Description:** This notebook enables an interactive chat experience with video input. Using advanced multimodal models like [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA), it allows users to ask questions or interact with the content of a video on [Intel® Tiber™ Developer Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).
-- **Team:** Jaideep Kamisetti, Basanta Patra
+- **Description:** This notebook enables an interactive chat experience with video input. Using advanced multimodal models like [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA), it allows users to ask questions or interact with the content of a video on [Intel® Tiber™ AI Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).
+- [Home](./video_analytics)
 - **Code:** [Here](https://github.com/rskasturi/usecases/blob/master/video_analytics/Running_on_XPU.ipynb)
+- **Team:** Jaideep Kamisetti, Basanta Patra
 
 ## Quantization
 
