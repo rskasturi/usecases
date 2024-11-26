@@ -14,9 +14,9 @@
 
 ## [Video Analytics](./video_analytics)
 
-- **Description:** This notebook enables an interactive chat experience with video input. Using advanced multimodal models like [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA), it allows users to ask questions or interact with the content of a video on [Intel® Tiber™ AI Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).
-- [Home](./video_analytics)
-- **Code:** [Here](https://github.com/rskasturi/usecases/blob/master/video_analytics/Running_on_XPU.ipynb)
+- **Description:** An End-to-End notebook that enables an interactive chat experience with video input. Using advanced multimodal models like [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA), it allows users to ask questions or interact with the content of a video on [Intel® Tiber™ AI Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).
+  - [Home](./video_analytics)
+  - [**Code**](https://github.com/rskasturi/usecases/blob/master/video_analytics/Running_on_XPU.ipynb)
 - **Team:** Jaideep Kamisetti, Basanta Patra
 
 ## Quantization
