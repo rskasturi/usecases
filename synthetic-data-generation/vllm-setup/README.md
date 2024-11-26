@@ -1,9 +1,10 @@
-# vllm Setup for Intel XPUs
+# vLLM Setup on Intel® XPUs
 
-Below are set of instructions to setup vllm on Intel Hardware
+Below are set of instructions to setup vLLM on Intel® Hardware.
 
-- Verified: Intel Data Center GPU Max 1100
-- Environment: Intel Tiber Developer Cloud
+- **Verified:** Intel® Data Center GPU Max 1100
+- **Environment:** [Intel® Tiber™ AI Cloud](https://console.cloud.intel.com/home)
+- [**Details**](../README.md/#verfied-environment--hardware)
 
 ## Conda Environment Setup
 
@@ -12,7 +13,7 @@ conda create -n vllm-xpu python=3.10 -y
 conda activate vllm-xpu
 ```
 
-## Install Intel Extension for PyTorch
+## Install Intel® Extension for PyTorch
 
 Install the latest version of IPEX for XPUs from [here](https://intel.github.io/intel-extension-for-pytorch/index.html#installation?platform=gpu)
 
@@ -26,7 +27,7 @@ python -m pip install torch==2.3.1+cxx11.abi torchvision==0.18.1+cxx11.abi torch
 python -c "import torch; import intel_extension_for_pytorch as ipex; print(torch.__version__); print(ipex.__version__); [print(f'[{i}]: {torch.xpu.get_device_properties(i)}') for i in range(torch.xpu.device_count())];"
 ```
 
-## Install and Build vllm
+## Install and Build vLLM
 
 ```bash
 git clone https://github.com/vllm-project/vllm.git
@@ -39,7 +40,7 @@ python -m pip install setuptools_scm
 VLLM_TARGET_DEVICE=xpu python setup.py install
 ```
 
-### Run Sample with vllm
+### Run Sample with vLLM
 
 ```bash
 python examples/offline_inference.py # <vllm-repo>/examples/offline_inference.py
@@ -47,3 +48,5 @@ python examples/offline_inference.py # <vllm-repo>/examples/offline_inference.py
 
 Output:
 ![vllm-xpu-output](vllm-xpu-image.png)
+
+## 🎉 Now you can run the Jupyter Notebook to Generate Synthetic Data from: [here](../data-generation/) 🎉**

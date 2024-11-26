@@ -1,20 +1,18 @@
 # Synthetic Data generation
 
+* **Pre-requisites:** Requires you to setup vLLM on Intel XPUs, You can follow them from [here](../vllm-setup/README.md/#conda-environment-setup).
+
 ## Setup Jupyter Kernel
 
-* Setup Instructions for XPU with vLLM are [here](../vllm-setup/README.md/#conda-environment-setup).
+* Below instructions help you to create Jupyter kernel to run data generation notebook.
 
-    ```bash  
+    ```bash
+    #make sure you activate `vllm-xpu` environment in your terminal
+    
     python -m pip install ipykernel
-    python -m ipykernel install --user --name=vllm-xpu    
+    python -m ipykernel install --user --name=vllm-xpu
     ```
 
-## Environment & Hardware
+* Make sure you select the ```vllm-xpu``` kernel while running the notebook.
 
-* [**Intel Tiber AI Cloud**](https://console.cloud.intel.com)
-
-```bash
-[opencl:cpu] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8468V OpenCL 3.0 (Build 0) [2024.18.7.0.11_160000]
-[opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
-[level_zero:gpu] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1100 1.3 [1.3.27191]
-```
+## 💯Now you are good to run the 📒[Notebook](./synthetic_datagen_xpu.ipynb)

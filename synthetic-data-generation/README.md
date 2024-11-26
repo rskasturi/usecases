@@ -21,11 +21,33 @@ within the LLM to create diverse synthetic data at scale.
 - Driven by the 1 billion personas in Persona Hub, this approach can easily create
 diverse synthetic data at a billion scale.
 
-## vllm setup on Intel XPUs
+## Setup Instructions
 
-- Detailed instructions for vllm setup are [here](./vllm-setup/)
+### Clone the Repository
+
+```bash
+git clone https://github.com/rskasturi/usecases.git && cd usecases
+cd synthetic-data-generation
+```
+
+### Pre-requistes
+
+#### [**Setting up vLLM**](./vllm-setup/)
+
+- Detailed instructions for vLLM setup on Intel® GPUs are [here](./vllm-setup/).
+- **Why Use vLLM?**: vLLM is a high-throughput and memory-efficient inference and serving engine for LLMs.
 
 ## Notebooks
 
-- Synthetic Data generation using vLLM on Intel XPUs: [Notebook](./data-generation/synthetic_datagen_xpu.ipynb)
-- Small Language Model finetuning with Synthetic Data on Intel XPUs: [Notebook](./finetuning-synthetic-data/)
+- Synthetic Data generation using vLLM on Intel® XPUs: [Notebook](./data-generation/synthetic_datagen_xpu.ipynb)
+- Small Language Model finetuning with Synthetic Data on Intel® XPUs: [Notebook](./finetuning-synthetic-data/)
+
+## Verfied Environment & Hardware
+
+- [**Intel® Tiber™ AI Cloud**](https://console.cloud.intel.com)
+  
+  ```bash
+    [opencl:cpu] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8468V OpenCL 3.0 (Build 0) [2024.18.7.0.11_160000]
+    [opencl:gpu] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1100 OpenCL 3.0 NEO  [23.35.27191.42]
+    [level_zero:gpu] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1100 1.3 [1.3.27191]
+    ```
