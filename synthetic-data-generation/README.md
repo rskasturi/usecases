@@ -21,6 +21,10 @@ within the LLM to create diverse synthetic data at scale.
 - Driven by the 1 billion personas in Persona Hub, this approach can easily create
 diverse synthetic data at a billion scale.
 
+## ITAC Notebook
+
+- [Click here](./ITAC/)
+
 ## Setup Instructions
 
 ### Clone the Repository
