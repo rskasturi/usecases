@@ -30,6 +30,7 @@ conda activate vlama
 Install the packages with help of requirements.txt file:
 
 ```
+cd video-analytics
 pip install -r requirements.txt
 ```
 Install [IPEX](https://intel.github.io/intel-extension-for-pytorch/index.html#installation?platform=gpu&version=v2.1.30%2bxpu&os=linux%2fwsl2&package=pip) with the below commands:
