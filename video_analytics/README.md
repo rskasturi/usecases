@@ -19,7 +19,7 @@ The following information outlines the specifications used for this project:
 | Package   | pip                       |
 
 
-### Conda Environment Setup
+### Environment Setup
 
 ```bash
 python3 -m venv vllama
@@ -44,33 +44,6 @@ python -m pip install torch==2.1.0.post3 torchvision==0.16.0.post3 torchaudio==2
 ```
 python -m pip install numpy==1.26.4
 ```
-
-## Run the application:
-Before running the [code](https://github.com/rskasturi/usecases/blob/master/video_analytics/Running_on_XPU.ipynb) we need to download the models with help of git lfs
-
-```
-git lfs install
-```
-```
-git clone https://huggingface.co/DAMO-NLP-SG/Video-LLaMA-2-7B-Pretrained
-```
-
-Now go to the below path "**./eval_configs/video_llama_eval_withaudio.yaml**" and update the respective paths for llama_model, imagebind_ckpt_path, ckpt and ckpt2.
-
-which looks like below
-
-![image](https://github.com/user-attachments/assets/63234ae8-4e95-435e-8b8f-5302d7642b11)
-
-**NOTE**
-
-If you get the below error:
-
-- ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor' please follow the below work around.
-  
-  Go to the below path inside your environment <your_env>/lib/python3.x/site-packages/pytorchvideo/transforms/augmentations.py and comment the below import i.e
-  
-  import torchvision.transforms.functional.to_tensor as F_t
-  
 
 
 
