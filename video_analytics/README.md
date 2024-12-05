@@ -22,16 +22,18 @@ The following information outlines the specifications used for this project:
 ### Conda Environment Setup
 
 ```bash
-conda create -n vlama python=3.10 -y
-conda activate vlama
+python3 -m venv vllama
+source vllama/bin/activate
 ```
 
 
 Install the packages with help of requirements.txt file:
 
 ```
-cd video-analytics
-pip install -r requirements.txt
+pip install -r requirement.txt
+```
+```
+pip install --upgrade --upgrade-strategy eager "optimum[neural-compressor]"
 ```
 Install [IPEX](https://intel.github.io/intel-extension-for-pytorch/index.html#installation?platform=gpu&version=v2.1.30%2bxpu&os=linux%2fwsl2&package=pip) with the below commands:
 ```
