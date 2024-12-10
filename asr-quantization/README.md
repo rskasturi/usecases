@@ -82,4 +82,6 @@ Step 3. Below mentioned changes need to be done inorder to source files of the p
   python quantized_inference.py
   ```
   ![alt text](image-2.png)
+
+  ## To run the detailed [whisper_notebook](https://github.com/rskasturi/usecases/blob/master/asr-quantization/Whisper_quantization.ipynb)
   
