@@ -83,5 +83,5 @@ Step 3. Below mentioned changes need to be done inorder to source files of the p
   ```
   ![alt text](image-2.png)
 
-  ## To run the detailed [whisper_notebook](https://github.com/rskasturi/usecases/blob/master/asr-quantization/Whisper_quantization.ipynb)
+  ## Notebook link: [whisper_notebook](https://github.com/rskasturi/usecases/blob/master/asr-quantization/Whisper_quantization.ipynb)
   
