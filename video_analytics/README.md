@@ -48,7 +48,7 @@ python -m pip install numpy==1.26.4
 ## Acknowledgement:
 We are grateful for the incredible projects that our [video_analytics](https://github.com/rskasturi/usecases/edit/master/video_analytics) has emerged from:
 
-[Video-LLAMA](https://github.com/DAMO-NLP-SG/Video-LLaMA) is the core of this project, where we successfully ran it on both CPUs and XPUs.
+[Video-LLAMA](https://github.com/DAMO-NLP-SG/Video-LLaMA) is the core of this project, which is enhanced to make it run on Intel CPU (SPR) and XPU (PVC-1100).
 
 [LLAMA](https://github.com/meta-llama/llama) Open and Efficient Foundation Language Models.
 
