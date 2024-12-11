@@ -23,7 +23,7 @@ diverse synthetic data at a billion scale.
 
 ## Notebooks
 
-- Synthetic Data generation using vLLM on Intel® XPUs: [Notebook](./data-generation/vLLM_Synthetic_Data.ipynb)
+- Synthetic Data generation using vLLM on Intel® XPUs: [Notebook](./vLLM_Synthetic_Data.ipynb)
 - Small Language Model finetuning with Synthetic Data on Intel® XPUs: [Notebook](./finetuning-synthetic-data/)
 
 ## Verfied Environment & Hardware

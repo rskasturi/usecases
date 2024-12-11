@@ -4,7 +4,7 @@
 
 - **Team:** Rajashekar Kasturi, Thasneem Vazim
 - **Description:** An End-to-End notebook for Synthetic Data generation using LLMs served with [vLLM](https://docs.vllm.ai/en/latest/index.html) and [Intel Extension for PyTorch](https://intel.github.io/intel-extension-for-pytorch/index.html#introduction).
-  - Synthetic data generation - [Notebook](./synthetic-data-generation/ITAC/vLLM_Synthetic_Data.ipynb)
+  - Synthetic data generation - [Notebook](./synthetic-data-generation/vLLM_Synthetic_Data.ipynb)
   - Finetuning generated synthetic data - [Notebook](./synthetic-data-generation/finetuning-synthetic-data/)
 
 ## [Video Analytics](./video_analytics)
