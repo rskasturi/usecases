@@ -21,29 +21,9 @@ within the LLM to create diverse synthetic data at scale.
 - Driven by the 1 billion personas in Persona Hub, this approach can easily create
 diverse synthetic data at a billion scale.
 
-## ITAC Notebook
-
-- [Click here](./ITAC/)
-
-## Setup Instructions
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/rskasturi/usecases.git && cd usecases
-cd synthetic-data-generation
-```
-
-### Pre-requistes
-
-#### [**Setting up vLLM**](./vllm-setup/)
-
-- Detailed instructions for vLLM setup on Intel® GPUs are [here](./vllm-setup/).
-- **Why Use vLLM?**: vLLM is a high-throughput and memory-efficient inference and serving engine for LLMs.
-
 ## Notebooks
 
-- Synthetic Data generation using vLLM on Intel® XPUs: [Notebook](./data-generation/synthetic_datagen_xpu.ipynb)
+- Synthetic Data generation using vLLM on Intel® XPUs: [Notebook](./data-generation/vLLM_Synthetic_Data.ipynb)
 - Small Language Model finetuning with Synthetic Data on Intel® XPUs: [Notebook](./finetuning-synthetic-data/)
 
 ## Verfied Environment & Hardware

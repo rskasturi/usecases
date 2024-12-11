@@ -1,8 +1,0 @@
-transformers==4.44.2
-datasets==2.21.0
-evaluate==0.4.3
-jiwer==3.0.4
-librosa==0.10.2.post1
-torch==2.1.0.post3+cxx11.abi
-neural_compressor==3.0.2
-torchaudio==2.1.0.post3+cxx11.abi
